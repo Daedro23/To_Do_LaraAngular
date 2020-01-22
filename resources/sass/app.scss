@@ -1,1 +1,24 @@
-//
+@import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import './variables';
+@import '../../node_modules/alertifyjs/build/css/alertify.min.css';
+@import '../../node_modules/toastr/build/toastr.min.css';
+.marg {
+    margin-top: 30px;
+}
+
+footer {
+    position: fixed;
+    bottom:0;
+    width:100%;
+}
+
+.tituloFooter {
+    float: left; 
+}
+
+.redes {
+   float: right; 
+}
+img {
+    height: 27px;
+}

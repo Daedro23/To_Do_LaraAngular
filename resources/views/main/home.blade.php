@@ -1,6 +1,6 @@
 @section('content')
 <div class="container" ng-controller="TodoList">
-    <button ng-click="openModal()" class="btn btn-md btn-success" P align="left">New Task</button>
+    <button ng-click="openModal()" class="btn btn-md btn-success">New Task</button>
     <div class="marg">
         <table id="tabla" class="table table-striped">
             <thead>
@@ -34,19 +34,19 @@
                     <h4 class="modal-title" id="myModal-label">Add task</h4>
                     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                 </div>
-                <form ng-submit="save()" role="form">
+                <form ng-submit="save()" role="form" name="FormAdd" novalidate>
                 <div class="modal-body">
                         <div class="form-group">
                             <label class="control-label" for="name">Name</label>
-                            <input type="text" name="AddName" class="form-control" ng-model="AddName">
+                            <input type="text" required name="AddName" class="form-control" ng-model="AddName">
                         </div>
                         <div class="form-group">
                             <label class="control-label" for="description">Description</label>
-                            <textarea  type="text" name="AddDescription" class="form-control" ng-model="AddDescription" rows="3"></textarea>
+                            <textarea type="text" required name="AddDescription" class="form-control" ng-model="AddDescription" rows="3"></textarea>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="submit" class="btn btn-success">Submit</button>
+                        <button type="submit" ng-disabled="!FormAdd.$valid" class="btn btn-success">Submit</button>
                     </div>
                 </form>
             </div>
